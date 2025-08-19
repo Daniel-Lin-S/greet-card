@@ -68,14 +68,17 @@ window.onload=function(){
 			this.setAttribute("class","");
 			}
 	},false);
-	page1.addEventListener("touchstart",function(event){
-		page1.style.display="none";
-		page2.style.display="block";
-		page3.style.display="block";
-		page3.style.top="100%"
+	page1.addEventListener("touchstart",
+        function(event){
+            page1.style.display="none";
+            page2.style.display="block";
+            page3.style.display="block";
+            page3.style.top="100%"
 
-		rollPages();
-	},false);
+            rollPages();
+        },
+        false
+    );
 
     var pages = [page2, page3];
     var currentPageIndex = 0;
@@ -95,6 +98,4 @@ window.onload=function(){
             setTimeout(rollPages, 5500); // Adjust the delay as needed
         }, 500);
     }
-
-    rollPages();
 }
