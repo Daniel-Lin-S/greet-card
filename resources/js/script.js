@@ -84,7 +84,7 @@ window.onload=function(){
     var currentPageIndex = 0;
 
     function rollPages() {
-        pages[currentPageIndex].style.display = "none";
+        var currentPage = pages[currentPageIndex];
         currentPageIndex = (currentPageIndex + 1) % pages.length;
         var nextPage = pages[currentPageIndex];
 
@@ -92,8 +92,12 @@ window.onload=function(){
         nextPage.style.top = "100%";
 
         setTimeout(function () {
-            pages[(currentPageIndex - 1 + pages.length) % pages.length].setAttribute("class", "page fadeOut");
+            currentPage.setAttribute("class", "page fadeOut");
             nextPage.setAttribute("class", "page fadeIn");
+
+            setTimeout(function () {
+                currentPage.style.display = "none";
+            }, 1000);
 
             setTimeout(rollPages, 5500); // Adjust the delay as needed
         }, 500);
