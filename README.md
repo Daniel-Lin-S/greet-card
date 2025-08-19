@@ -3,7 +3,7 @@ a greeting card which describes of the Natsume's Book of Friends，and it can pl
 
 模仿慕课网的一个教程，以夏目友人帐为主题做了一个音乐电子贺卡，主要是运行在手机端或chrome手机模式，在右上角的组件中，点击“+”“-”号可以调节音乐音量大小，点击旋转的唱片可以“播放”“暂停”音乐
 
-The url（直接访问的网址）:https://orangesnow.github.io/The-GreetCard-to-Natsume-s-Book-of-Friends/GreetCard%20of%20Natsume/index.html
+Page URL: https://github.com/Daniel-Lin-S/greet-card/blob/master/resources/index.html
 
 <b>主要功能包括：</b>页面淡入淡出、CSS动画（灯光闪烁、图片旋转）、音乐播放与暂停、音量大小调节
 
