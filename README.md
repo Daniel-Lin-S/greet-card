@@ -1,15 +1,6 @@
-# The-GreetCard-to-Natsume-s-Book-of-Friends
-a greeting card which describes of the Natsume's Book of Friends，and it can play music or adjust the volume
+# A Music Page
 
-模仿慕课网的一个教程，以夏目友人帐为主题做了一个音乐电子贺卡，主要是运行在手机端或chrome手机模式，在右上角的组件中，点击“+”“-”号可以调节音乐音量大小，点击旋转的唱片可以“播放”“暂停”音乐
-
-Page URL: https://github.com/Daniel-Lin-S/greet-card/blob/master/resources/index.html
-
-<b>主要功能包括：</b>页面淡入淡出、CSS动画（灯光闪烁、图片旋转）、音乐播放与暂停、音量大小调节
-
-<b>主要技术：</b>@keyframe、animation、transform、JavaScript。
-
-<b>注意点：</b>适应不同屏幕大小需要使用vh和vw为单位。
+Page URL: https://daniel-lin-s.github.io/greet-card/
 
 
 ## The user interface
@@ -21,10 +12,16 @@ Click the disk to start playing.
 
 ## Develouper options
 
-### Change Music
-Replace the mp3 file in `resources/audio` 
+### Build Live page
+Go to </b>Settings<b> of the repository, click </b>Pages<b> section in left sidebar. Select the branch and folder `/ (root)`, click </b>Save<b> button. After a while you will see a block displaying "Your site is live at `url`". Copy the url and open in a new tab.
 
-#### Music Player
+### Change Music
+Replace the `song.mp3` file in `resources/audio` to change the background music.
+
+### Change Image
+
+
+### Music Player
 var music=document.getElementById("music");
 
 	var audio=document.getElementsByTagName("audio")[0];

@@ -15,11 +15,19 @@ window.onload=function(){
 	console.log("屏幕可用工作区高度：" + window.screen.availHeight);
 	console.log("屏幕可用工作区宽度：" + window.screen.availWidth);
 
+    var page1=document.getElementById("page1");
+    var page2=document.getElementById("page2");
+    var page3=document.getElementById("page3");
+
 	var music=document.getElementById("music");
 	var audio=document.getElementsByTagName("audio")[0];
 	var n11=document.getElementById("n1");
 	var n12=document.getElementById("n2");
 	audio.volume = 0.6;
+
+    audio.play().catch(function (error) {
+        console.log("Auto-play was blocked. Waiting for user interaction.");
+    });
 
 	n11.addEventListener("touchstart",function(event){
 		if(audio.volume>=0&&audio.volume<=1){
@@ -66,11 +74,27 @@ window.onload=function(){
 		page3.style.display="block";
 		page3.style.top="100%"
 
-		setTimeout(function(){
-			page2.setAttribute("class","page fadeOut");
-			page3.setAttribute("class","page fadeIn");
-		},5500)
-
-		
+		rollPages();
 	},false);
+
+    var pages = [page2, page3];
+    var currentPageIndex = 0;
+
+    function rollPages() {
+        pages[currentPageIndex].style.display = "none";
+        currentPageIndex = (currentPageIndex + 1) % pages.length;
+        var nextPage = pages[currentPageIndex];
+
+        nextPage.style.display = "block";
+        nextPage.style.top = "100%";
+
+        setTimeout(function () {
+            pages[(currentPageIndex - 1 + pages.length) % pages.length].setAttribute("class", "page fadeOut");
+            nextPage.setAttribute("class", "page fadeIn");
+
+            setTimeout(rollPages, 5500); // Adjust the delay as needed
+        }, 500);
+    }
+
+    rollPages();
 }
