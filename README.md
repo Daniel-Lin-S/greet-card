@@ -12,18 +12,19 @@ The url（直接访问的网址）:https://orangesnow.github.io/The-GreetCard-to
 <b>注意点：</b>适应不同屏幕大小需要使用vh和vw为单位。
 
 
-## 在手机端运行截图
-如图所示，通过JS三个画面会按顺序转换
+## The user interface
+Volume up and down: 
 
-右上角音乐播放器通过绝对定位固定
+<img src="img/volume_up.png" width="100"/> <img src="img/volume_down.png" width="100"/>
 
-并通过JS调节音量大小，暂停、播放音乐
+Click the disk to start playing.
 
-<img src="img/1.png" width="300"/>
-<img src="img/2.png" width="300"/>
-<img src="img/3.png" width="300"/>
+## Develouper options
 
-## 音乐播放器代码
+### Change Music
+Replace the mp3 file in `resources/audio` 
+
+#### Music Player
 var music=document.getElementById("music");
 
 	var audio=document.getElementsByTagName("audio")[0];
